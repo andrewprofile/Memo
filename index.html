@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pl"><head>
+<meta charset="UTF-8">
+<title>Memo</title>
+<script src="js/jquery.js"></script>
+<script src="js/memo.js"></script>
+<style>
+	body { padding: 10px; outline: none; }
+	input{ margin-left:10px}
+	.surface{ width:1000px; height:696px; box-shadow: 1px 1px 1px #fff, inset 1px 1px 6px rgba(0, 0, 0, 0.2); text-align:center;  margin:auto; right: 30px; border-radius: 6px; background-color:lightgray;}
+	.area {	position: relative;	float:left; background: #fff; overflow: hidden;	width: 865px; height: 696px; box-shadow: 1px 1px 1px #fff, inset 1px 1px 6px rgba(0, 0, 0, 0.2); display:none; border-top-left-radius: 6px;	border-bottom-left-radius: 6px; background: lightgray url(img/dora.jpg)  no-repeat; }
+	.field { position: absolute; float: left; width: 80px; height: 80px; margin: 5px; border-radius: 5px; box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2), inset 1px 1px 1px #fff, 1px 1px 3px rgba(0,0,0,1);	background: #ffee50 url(img/my_documents.png) center center no-repeat; }
+	.moves {float:left; margin:15px; margin-bottom:0px; display:none; }
+	.pars { float:left; margin:15px; margin-bottom:0px; display:none; }
+	#info {width:865px; color:black; position:absolute; text-align:center; z-index:1000; display:none; opacity:0.6;}	
+	#time {float:left; margin:15px; margin-left:20px; text-align:center; width:auto; display:none;}
+	.stop{ display:none;  position: relative;  float:left; margin:5px; width:48px; height:48px; background: url(audio/gnome_media_playback_pause.png); }
+	.tilesLast{ float:left; margin:15px; margin-bottom:0px; display:none;}
+	#infobox{position: relative;  float:left;}
+	.muted { display:none; position: relative;  float:left; margin:12px; width:32px; height:32px; background: url(audio/gnome_audio_volume_high.png);  }
+	.about { display:none;   float:left; margin:12px; width:32px; height:32px; background: url(img/gnome_preferences_desktop_accessibility.png); }
+	.help { display:none;    float:left; margin:12px; width:32px; height:32px; background: url(img/gnome_preferences_desktop_keyboard_shortcuts.png); }
+	.startGame { position: relative; display:none; top:290px; margin:auto; width: 150px; padding:10px; text-align:center;   border: 1px solid black; border-radius: 5px; cursor:pointer; }	
+	.gameOver{  position: relative; display:none; top:290px; margin:auto; width: 100px; padding:10px; text-align:center; display:none;  border: 1px solid black; border-radius: 5px; cursor:pointer; }	
+</style>
+</head>
+<body>
+<div class= "surface">
+	<audio id="multiaudio2" src="audio/piano_chord.wav" preload="auto"></audio>
+	<audio id="multiaudio3" src="audio/synth_vox.wav" preload="auto"></audio>
+	<div class="area"></div>
+		<a href="#" class="stop"></a>
+		<a href="#" class="muted"></a>
+	<div id="infobox">		
+		<a href="#" class="about"></a>
+		<a href="#" class="help"></a>
+	<div>
+	</div>
+</body>
+</html>
